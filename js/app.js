@@ -1,3 +1,16 @@
+// show/hide subnav
+
+$subnav = $('.has-subnav');
+
+$subnav.on('click', function(e){
+  $this = $(this);
+  e.preventDefault();
+  console.log('clark');
+  $this.find('.subnav').toggleClass('show-subnav');
+  //toggleClass('show-subnav');
+})
+
+
  // mobile menu opener
 
 $menu = $('.burger-container');

@@ -47,9 +47,24 @@ header .container nav {
     display: block;
   }
 }
-header .container nav ul li {
+header .container nav > ul > li {
   display: inline-block;
   float: left;
+}
+header .container nav > ul > li.has-subnav {
+  position: relative;
+}
+header .container nav > ul > li.has-subnav .subnav {
+  display: none;
+  z-index: 1;
+}
+header .container nav > ul > li.has-subnav .subnav.show-subnav {
+  display: block;
+  position: absolute;
+  top: 100%;
+}
+header .container nav > ul > li.has-subnav .subnav .subnav-item {
+  background: #fff;
 }
 @media (max-width: 767px) {
   header .container nav.mobile-menu {
@@ -73,10 +88,6 @@ header .container nav ul li {
     right: 0;
     background-color: #e9531d;
     z-index: 1;
-  }
-  header .container nav.mobile-menu ul li {
-    display: block;
-    float: none;
   }
 }
 header .container .contact {
@@ -123,12 +134,29 @@ header .container .burger-container {
   left: 50%;
   color: #fff;
 }
+.jumbotron .jumbotron-content {
+  color: #fff;
+  position: absolute;
+}
 footer {
+  color: #fff;
   background-color: #000;
   bottom: 0;
   width: 100%;
-  height: 100px;
-  background-color: #fff;
+}
+footer .bs-col {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  footer .bs-col:first-child {
+    text-align: left;
+  }
+  footer .bs-col:last-child {
+    text-align: right;
+  }
+}
+a {
+  text-decoration: none;
 }
 span.main-title {
   color: #fff;

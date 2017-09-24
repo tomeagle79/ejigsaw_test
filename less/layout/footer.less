@@ -1,7 +1,19 @@
 footer {
+	color: @color-neutral;
 	background-color: @color-primary;
   bottom: 0;
   width: 100%;
-  height: 100px;
-  background-color: #fff;
+  .bs-col {
+		text-align: center;
+		@media(min-width: 768px){
+			&:first-child {
+				text-align: left;
+
+			}
+			&:last-child {
+				text-align: right;
+
+			}
+		}
+	}
 }

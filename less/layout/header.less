@@ -1,17 +1,31 @@
 header {
   .container {
     .logo-wrapper {
-
     }
     nav {
       display: none;
       @media(min-width: 768px){
         display: block;
       }
-      ul {
-        li {
+      > ul {
+        > li {
           display: inline-block;
           float: left;
+          &.has-subnav {
+            position: relative;
+            .subnav {
+              display: none;
+              z-index: 1;
+              &.show-subnav {
+                display: block;
+                position:absolute;
+                top: 100%;
+              }
+              .subnav-item {
+                background: @color-neutral;
+              }
+            }
+          }
         }
       }
       &.mobile-menu {
@@ -27,13 +41,7 @@ header {
           right: 0;
           background-color: @color-secondary;
           z-index: 1;
-          ul {
-            li {
-              display: block;
-              float: none;
 
-            }
-          }
         }
       }
     }
