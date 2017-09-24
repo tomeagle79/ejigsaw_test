@@ -1,0 +1,82 @@
+@import "./less/base/mixins.less";
+@import "./less/base/flex-mixins.less";
+
+
+@import "./less/base/reset.less";
+@import "./less/base/variables.less";
+
+@import "./less/components/typography.less";
+@import "./less/components/buttons.less";
+
+
+
+@import "./less/layout/header.less";
+
+@import "./less/layout/main.less";
+
+@import "./less/layout/footer.less";
+
+
+// Styling =============================================================//
+
+* {
+  // border: 1px solid lightgray;
+}
+
+body {
+
+}
+
+header {
+
+}
+
+span.main-title {
+  color: #fff;
+}
+
+p {
+  color: @color-text;
+  padding: 15px;
+}
+
+// div > ul,
+// div > ol{
+//   -webkit-columns: 50% 2;
+//   -moz-columns: 50% 2;
+//   -o-columns: 50% 2;
+//   columns: 50% 2;
+// }
+
+li{
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+table {}
+
+.center-transform {
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+}
+
+.sticky-bg {
+  background-color: #999;
+}
