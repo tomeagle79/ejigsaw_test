@@ -1,14 +1,8 @@
+@import "./less/base/variables.less";
 @import "./less/base/mixins.less";
 @import "./less/base/flex-mixins.less";
 
-
 @import "./less/base/reset.less";
-@import "./less/base/variables.less";
-
-@import "./less/components/typography.less";
-@import "./less/components/buttons.less";
-
-
 
 @import "./less/layout/header.less";
 
@@ -23,29 +17,21 @@
   // border: 1px solid lightgray;
 }
 
+ul {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
 }
 
-span.main-title {
-  color: #fff;
-}
-
 p {
   color: @color-text;
-  padding: 15px;
 }
 
-// div > ul,
-// div > ol{
-//   -webkit-columns: 50% 2;
-//   -moz-columns: 50% 2;
-//   -o-columns: 50% 2;
-//   columns: 50% 2;
-// }
-
-li{
-
+img {
+  width: 100%;
+  height: auto;
 }
 
 a {
@@ -55,8 +41,6 @@ a {
     text-decoration: none;
   }
 }
-
-table {}
 
 .center-transform {
   transform: translate(-50%, -50%);

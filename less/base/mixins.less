@@ -7,3 +7,42 @@
 .shadow {
  text-shadow: 5px 5px 20px rgba(255, 255, 255, 0.5);
 }
+
+.set-padding(){
+  padding: @spacing-mobile;
+  @media(min-width: 768px){
+    padding: @spacing-tablet;
+  }
+  @media(min-width: 768px){
+    padding: @spacing-tablet;
+  }
+  @media(min-width: 1200px){
+    padding: @spacing-desktop;
+  }
+}
+
+.set-padding-left(){
+  padding-left: @spacing-mobile;
+  @media(min-width: 768px){
+    padding-left: @spacing-tablet;
+  }
+  @media(min-width: 768px){
+    padding-left: @spacing-tablet;
+  }
+  @media(min-width: 1200px){
+    padding-left: @spacing-desktop;
+  }
+}
+
+.set-padding-right(){
+  padding-right: @spacing-mobile;
+  @media(min-width: 768px){
+    padding-right: @spacing-tablet;
+  }
+  @media(min-width: 768px){
+    padding-right: @spacing-tablet;
+  }
+  @media(min-width: 1200px){
+    padding-right: @spacing-desktop;
+  }
+}

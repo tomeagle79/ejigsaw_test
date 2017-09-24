@@ -5,7 +5,6 @@ $subnav = $('.has-subnav');
 $subnav.on('click', function(e){
   $this = $(this);
   e.preventDefault();
-  console.log('clark');
   $this.find('.subnav').toggleClass('show-subnav');
   //toggleClass('show-subnav');
 })
@@ -19,19 +18,16 @@ $body = $('body');
 
 $menu.on('click', function(){
   $nav.toggleClass('mobile-menu');
+  $menu.find('.icon').toggleClass('fa-bars fa-times');
 })
 
 
 // Back to top button
 
 	$('.button-to-top').click(function(e){
-
 		if (hash != ""){
-
 			e.preventDefault();
-
 			var hash = this.hash;
-
 			$("body").animate({
 				scrollTop: 0
 			}, 600);
