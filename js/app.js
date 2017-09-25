@@ -5,7 +5,8 @@ $subnav = $('.has-subnav');
 $subnav.on('click', function(e){
   $this = $(this);
   e.preventDefault();
-  $this.find('.subnav').toggleClass('show-subnav');
+  //$this.find('.subnav').toggleClass('show-subnav');
+  $this.find('.subnav').slideToggle(400, 'swing');
   //toggleClass('show-subnav');
 })
 
@@ -21,6 +22,16 @@ $menu.on('click', function(){
   $menu.find('.icon').toggleClass('fa-bars fa-times');
 })
 
+
+// Navigate to 'about us' section
+
+$('.fa-chevron-down').click(function(e){
+	e.preventDefault();
+	  var scrollToAbout = $('#about').offset().top;
+    $("body").animate({
+			scrollTop: scrollToAbout + 5
+		}, 600);
+});
 
 // Back to top button
 

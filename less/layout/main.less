@@ -1,56 +1,67 @@
 .jumbotron {
+	margin-bottom: 0;
 	position: relative;
-		background: url(../img/event-1.jpg);
-    background-size: cover;
-    background-position: center center;
-		border-radius: 0;
-		height: 200px;
-		@media(min-width: 768px){
-			height: 415px;
-		}
+	background: url(../img/event-1.jpg);
+  background-size: cover;
+  background-position: center center;
+	border-radius: 0;
+	// height: 200px;
+	// @media(min-width: 768px){
+	// 	height: 415px;
+	// 	@media(min-width: 1200px){
+	// 		height: 680px;
+	// 	}
+	// }
+	height: ~"calc(100vh - 72.22px)";
+	@media(min-width: 768px){
+	}
 		@media(min-width: 1200px){
-			height: 680px;
+			height: ~"calc(100vh - 122.22px)";
 		}
-		.icon {
+	.icon {
+		position: absolute;
+		left: 50%;
+		right: 50%;
+		bottom: 20px;
+		font-size: 30px;
+		@media(min-width: 992px){
+			bottom: 40px;
+			font-size: 50px;
+		}
+		color: @color-neutral;
+		transition: all 0.3s;
+		&:hover {
+			opacity: 0.8;
+			color: @color-secondary;
+		}
+	}
+	.jumbotron-content {
+		color: @color-neutral;
+		img {
+			max-width: 320px;
+		}
+		@media(min-width:992px){
 			position: absolute;
 			left: 50%;
-			right: 50%;
-			bottom: 20px;
-			font-size: 30px;
+			bottom: 180px;
+		}
+		.subtitle {
+			font-family: @font-text;
+			font-weight: bold;
+			text-transform: uppercase;
 			@media(min-width: 992px){
-				bottom: 40px;
-				font-size: 50px;
-			}
-			color: @color-neutral;
-			transition: all 0.3s;
-			&:hover {
-				opacity: 0.8;
+				font-size: 36px;
 			}
 		}
-		.jumbotron-content {
-			color: @color-neutral;
-			img {
-				max-width: 320px;
-			}
-			@media(min-width:992px){
-				position: absolute;
-				left: 50%;
-				bottom: 180px;
-			}
-			.subtitle {
-				font-family: @font-text;
-				font-weight: bold;
-				text-transform: uppercase;
-				@media(min-width: 992px){
-					font-size: 36px;
-
-				}
-			}
-		}
+	}
 }
 
 .list-blurbs {
+	.set-padding-top();
+	.set-padding-bottom();
 	.col-md-4 {
+		.set-padding-top();
+		.set-padding-bottom();
 		&:first-child {
 			text-align: center;
 			@media(min-width: 768px){
@@ -64,7 +75,8 @@
 		text-align: center;
 	}
 	p {
-		line-height: 1.3;
+		margin-bottom: 0;
+		line-height: 1.25;
 		@media(min-width: 992px){
 			font-size: 18px;
 		}
@@ -75,32 +87,65 @@
 }
 
 .list-teasers {
-	.teaser {
-		.image-wrapper {
-			position: relative;
-			overflow: hidden;
-			img {
-				width: 100%;
+	.container {
+		.row {
+			.col-md-4 {
+				.set-margin-bottom();
+				.teaser {
+					.image-wrapper {
+						position: relative;
+						overflow: hidden;
+						img {
+							width: 100%;
+						}
+						.teaser-title {
+							position: absolute;
+							width: 60%;
+					    height: 60%;
+					    bottom: -10%;
+					    left: -10%;
+					    background: #fff;
+					    border-radius: 50%;
+							.display-flex();
+							.justify-content(center);
+							.align-items(center);
+							font-size: 24px;
+							@media(min-width: 768px) and (max-width: 1199px){
+								font-size: 14px;
+							}
+						}
+					}
+				}
 			}
-			.teaser-title {
-				position: absolute;
-				width: 93px;
-		    height: 93px;
-		    bottom: -24px;
-		    left: -32px;
-		    background: #fff;
-		    border-radius: 50%;
-			}
-
 		}
 	}
 }
 
 .owl-carousel-wrapper {
+	.set-padding-top();
+	.set-padding-bottom();
 	.owl-carousel {
-		position: relative;
 		.item {
+			position: relative;
+			.logo-wrapper {
+				position: absolute;
+				top: -50px;
+				left: ~"calc(50% - 50px)";
+				background-color: #fff;
+				height: 100px;
+				width: 100px;
+				text-align: center;
+				img {
+					height: 100px;
+					width:auto;
+					margin: auto;
+				}
+			}
 			.wrap {
+				.set-padding() ;
+				.set-margin-bottom();
+				padding-top: 60px !important;
+				margin-top: 60px !important;
 				text-align: center;
 				border: 1px solid @color-secondary;
 				.name {
@@ -116,13 +161,40 @@
 				color: @color-secondary;
 				top: 0%;
 				bottom: 0;
+				//border: 1px solid blue;
+				.icon {
+					position: absolute;
+					top: 50%;
+					//top: ~"calc(50% - 18px)";
+					font-size: 36px;
+				}
 			}
 			.owl-prev {
 				left: 0;
+				.icon {
+
+				}
 			}
 			.owl-next {
 				right: 0;
+				.icon {
+					right: -100%;
+				}
 			}
 		}
+	}
+}
+
+footer {
+	.set-padding-top();
+	.set-padding-bottom();
+	.logo-safeshow-white {
+		width: 183px;
+	}
+	.logo-ejigsaw {
+		width: 79px;
+	}
+	.button-to-top {
+		position: fixed;
 	}
 }
