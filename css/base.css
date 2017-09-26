@@ -55,6 +55,11 @@ header .container .logo-wrapper {
 header .container nav {
   display: none;
 }
+@media (max-width: 991px) {
+  header .container nav {
+    overflow: scroll;
+  }
+}
 @media (min-width: 992px) {
   header .container nav {
     display: block;
@@ -79,37 +84,21 @@ header .container nav > ul {
   }
 }
 header .container nav > ul > li {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
 }
 @media (min-width: 768px) {
   header .container nav > ul > li {
-    padding-left: 20px;
+    padding: 20px;
   }
 }
 @media (min-width: 768px) {
   header .container nav > ul > li {
-    padding-left: 20px;
+    padding: 20px;
   }
 }
 @media (min-width: 1200px) {
   header .container nav > ul > li {
-    padding-left: 30px;
-  }
-}
-@media (min-width: 768px) {
-  header .container nav > ul > li {
-    padding-right: 20px;
-  }
-}
-@media (min-width: 768px) {
-  header .container nav > ul > li {
-    padding-right: 20px;
-  }
-}
-@media (min-width: 1200px) {
-  header .container nav > ul > li {
-    padding-right: 30px;
+    padding: 30px;
   }
 }
 header .container nav > ul > li.has-subnav {
@@ -118,30 +107,34 @@ header .container nav > ul > li.has-subnav {
 header .container nav > ul > li.has-subnav .subnav {
   display: none;
   z-index: 1;
-  position: absolute;
   top: 100%;
 }
+@media (min-width: 992px) {
+  header .container nav > ul > li.has-subnav .subnav {
+    position: absolute;
+    background: #fff;
+  }
+}
 header .container nav > ul > li.has-subnav .subnav .subnav-item {
-  background: #fff;
-  padding: 20px;
+  padding: 12px 24px;
 }
-@media (min-width: 768px) {
-  header .container nav > ul > li.has-subnav .subnav .subnav-item {
-    padding: 20px;
+header .container nav > ul > li a {
+  color: #fff;
+  font-size: 30px;
+}
+@media (min-width: 992px) {
+  header .container nav > ul > li a {
+    font-size: inherit;
+    color: #000;
   }
 }
-@media (min-width: 768px) {
-  header .container nav > ul > li.has-subnav .subnav .subnav-item {
-    padding: 20px;
-  }
-}
-@media (min-width: 1200px) {
-  header .container nav > ul > li.has-subnav .subnav .subnav-item {
-    padding: 30px;
-  }
+header .container nav > ul > li a:hover,
+header .container nav > ul > li a:focus {
+  color: #FF5000;
+  text-decoration: none;
 }
 @media (max-width: 992px) {
-  header .container nav.mobile-menu {
+  header .container nav.nav-mobile {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: -ms-flex;
@@ -160,8 +153,8 @@ header .container nav > ul > li.has-subnav .subnav .subnav-item {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #FF5000;
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
   }
 }
 header .container .contact {
@@ -200,12 +193,15 @@ header .container .burger-container {
   top: 50%;
   transform: translateY(-50%);
   right: 30px;
-  z-index: 1;
+  z-index: 100;
 }
 @media (min-width: 992px) {
   header .container .burger-container {
     display: none;
   }
+}
+header .container .burger-container .icon.white {
+  color: #fff;
 }
 .jumbotron {
   margin-bottom: 0;
@@ -594,19 +590,19 @@ a:focus {
   color: #FF5000;
   text-decoration: none;
 }
+a {
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
 p {
   color: #646569;
 }
 img {
   width: 100%;
   height: auto;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-a:hover {
-  text-decoration: none;
 }
 .center-transform {
   transform: translate(-50%, -50%);

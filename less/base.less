@@ -31,6 +31,15 @@ a {
   &:visited {
   }
 }
+a {
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+  &:visited {
+  }
+}
 
 p {
   color: @color-text;
@@ -41,20 +50,9 @@ img {
   height: auto;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  &:hover {
-    text-decoration: none;
-  }
-}
-
 .center-transform {
   transform: translate(-50%, -50%);
 }
-
-
-
 
 
 .sticky {
